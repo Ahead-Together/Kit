@@ -231,6 +231,7 @@ public class ValidationUtil {
 		}
 	}
 	
+	//----------------- Add by Anderson Begin:---------------------
 	/**
 	 * Validation method for time. The support time format is "hh:mm" or
 	 * "hh:mm:ss".
@@ -268,6 +269,7 @@ public class ValidationUtil {
 		{
 			return false;
 		}
+		// ----BUG ID 5473 ,Rocket.He, begin---
 		try
 		{
 			Double.parseDouble(text);
@@ -277,6 +279,7 @@ public class ValidationUtil {
 		{
 			return false;
 		}
+		// ----BUG ID 5473 ,Rocket.He, end---
 	}
 	
    /**
@@ -399,7 +402,7 @@ public class ValidationUtil {
 	{
 		return ((theyear % 4 == 0 && theyear % 100 != 0) || theyear % 400 == 0) ? 29 : 28;
 	}
-	
+	//----------------- Add by Anderson End:---------------------
 	/**
 	 * retrieve not null value.
 	 * @param valueA
